@@ -9,7 +9,6 @@
 #import "CommitListViewController.h"
 #import "FLEXample-Swift.h"
 #import "Person.h"
-#import <FLEX.h>
 
 @interface CommitListViewController ()
 @property (nonatomic) FLEXMutableListSection<Commit *> *commits;

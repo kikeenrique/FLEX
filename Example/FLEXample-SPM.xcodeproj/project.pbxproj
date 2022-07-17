@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C09C013A2884626B00673613 /* FLEX in Frameworks */ = {isa = PBXBuildFile; productRef = C09C01392884626B00673613 /* FLEX */; };
 		C386D6D02419975A00699085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C386D6CF2419975A00699085 /* AppDelegate.swift */; };
 		C386D6D22419975A00699085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C386D6D12419975A00699085 /* SceneDelegate.swift */; };
 		C386D6D62419975B00699085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C386D6D52419975B00699085 /* Assets.xcassets */; };
@@ -21,7 +22,6 @@
 		C386D705241AA61600699085 /* music_library_schema.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C386D703241AA61600699085 /* music_library_schema.jpg */; };
 		C386D70B241AA67800699085 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = C386D709241AA67800699085 /* Dog.m */; };
 		C386D70C241AA67800699085 /* Owner.m in Sources */ = {isa = PBXBuildFile; fileRef = C386D70A241AA67800699085 /* Owner.m */; };
-		C38D96EC2818F306008709D0 /* Reflex in Frameworks */ = {isa = PBXBuildFile; productRef = C38D96EB2818F306008709D0 /* Reflex */; };
 		C3A67856241AB8AD005A4681 /* MiscNetworkRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A67855241AB8AD005A4681 /* MiscNetworkRequests.m */; };
 		C3A67858241ADDF7005A4681 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A67857241ADDF7005A4681 /* Commit.swift */; };
 		C3B3760025B8CDA300AD43AB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B375FF25B8CDA300AD43AB /* Person.m */; };
@@ -29,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		BBD699DDBAC5A16D8CFD39AC /* libPods-FLEXample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FLEXample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C09C01382884624500673613 /* FLEX */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FLEX; path = ..; sourceTree = "<group>"; };
 		C386D6CC2419975A00699085 /* FLEXample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLEXample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C386D6CF2419975A00699085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C386D6D12419975A00699085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,16 +63,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C38D96EC2818F306008709D0 /* Reflex in Frameworks */,
+				C09C013A2884626B00673613 /* FLEX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C09C01372884624500673613 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C09C01382884624500673613 /* FLEX */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		C386D6C32419975A00699085 = {
 			isa = PBXGroup;
 			children = (
+				C09C01372884624500673613 /* Packages */,
 				C386D6CE2419975A00699085 /* FLEXample */,
 				C3A67853241AB88F005A4681 /* Realm */,
 				C386D6CD2419975A00699085 /* Products */,
@@ -183,7 +193,7 @@
 			);
 			name = FLEXample;
 			packageProductDependencies = (
-				C38D96EB2818F306008709D0 /* Reflex */,
+				C09C01392884626B00673613 /* FLEX */,
 			);
 			productName = FLEXample;
 			productReference = C386D6CC2419975A00699085 /* FLEXample.app */;
@@ -215,7 +225,6 @@
 			);
 			mainGroup = C386D6C32419975A00699085;
 			packageReferences = (
-				C38D96EA2818F306008709D0 /* XCRemoteSwiftPackageReference "Reflex" */,
 			);
 			productRefGroup = C386D6CD2419975A00699085 /* Products */;
 			projectDirPath = "";
@@ -461,22 +470,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		C38D96EA2818F306008709D0 /* XCRemoteSwiftPackageReference "Reflex" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "file:///Users/tanner/Repos/Reflex";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		C38D96EB2818F306008709D0 /* Reflex */ = {
+		C09C01392884626B00673613 /* FLEX */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C38D96EA2818F306008709D0 /* XCRemoteSwiftPackageReference "Reflex" */;
-			productName = Reflex;
+			productName = FLEX;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
