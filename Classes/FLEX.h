@@ -14,6 +14,7 @@
 #import "FLEXExplorerToolbar.h"
 #import "FLEXExplorerToolbarItem.h"
 #import "FLEXGlobalsEntry.h"
+#import "FLEXFileBrowserController.h"
 
 #import "FLEX-Core.h"
 #import "FLEX-Runtime.h"
