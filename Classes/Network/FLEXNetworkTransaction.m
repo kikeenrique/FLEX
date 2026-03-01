@@ -185,13 +185,12 @@
             _cachedRequestBody = self.request.HTTPBody;
         } else if ([self.request.HTTPBodyStream conformsToProtocol:@protocol(NSCopying)]) {
             NSInputStream *bodyStream = [self.request.HTTPBodyStream copy];
-            const NSUInteger bufferSize = 1024;
-            uint8_t buffer[bufferSize];
+            uint8_t buffer[1024];
             NSMutableData *data = [NSMutableData new];
             [bodyStream open];
             NSInteger readBytes = 0;
             do {
-                readBytes = [bodyStream read:buffer maxLength:bufferSize];
+                readBytes = [bodyStream read:buffer maxLength:sizeof(buffer)];
                 [data appendBytes:buffer length:readBytes];
             } while (readBytes > 0);
             [bodyStream close];
