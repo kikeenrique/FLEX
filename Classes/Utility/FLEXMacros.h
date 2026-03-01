@@ -41,13 +41,12 @@ extern BOOL FLEXConstructorsShouldRun(void);
 #define FLEX_EXIT_IF_NO_CTORS() if (!FLEXConstructorsShouldRun()) return;
 
 NS_INLINE CGFloat _FLEXScreenScale(void) {
-    if (@available(iOS 13.0, *)) {
-        CGFloat scale = UITraitCollection.currentTraitCollection.displayScale;
-        return scale > 0 ? scale : 1.0;
-    } else {
-        // Fallback for iOS 12
-        return UIScreen.mainScreen.scale;
+    for (UIScene *scene in UIApplication.sharedApplication.connectedScenes) {
+        if ([scene isKindOfClass:[UIWindowScene class]]) {
+            return ((UIWindowScene *)scene).screen.scale;
+        }
     }
+    return 1.0;
 }
 
 /// Rounds down to the nearest "point" coordinate

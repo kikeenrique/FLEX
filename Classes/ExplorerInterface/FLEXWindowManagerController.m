@@ -45,8 +45,8 @@
 #pragma mark - Private
 
 - (void)reloadData {
-    self.keyWindow = UIApplication.sharedApplication.keyWindow;
-    self.windows = UIApplication.sharedApplication.windows;
+    self.keyWindow = FLEXUtility.appKeyWindow;
+    self.windows = FLEXUtility.allWindows;
     self.keyWindowSubtitle = self.windowSubtitles[[self.windows indexOfObject:self.keyWindow]];
     self.windowSubtitles = [self.windows flex_mapped:^id(UIWindow *window, NSUInteger idx) {
         return [NSString stringWithFormat:@"Level: %@ — Root: %@",
@@ -77,9 +77,9 @@
     [self reloadData];
     [self.tableView reloadData];
     
-    UIWindow *highestWindow = UIApplication.sharedApplication.keyWindow;
+    UIWindow *highestWindow = FLEXUtility.appKeyWindow;
     UIWindowLevel maxLevel = 0;
-    for (UIWindow *window in UIApplication.sharedApplication.windows) {
+    for (UIWindow *window in FLEXUtility.allWindows) {
         if (window.windowLevel > maxLevel) {
             maxLevel = window.windowLevel;
             highestWindow = window;
@@ -278,7 +278,7 @@
             [self showRevertOrDismissAlert:^{ targetWindow.windowLevel = oldLevel; }];
         });
         make.button(@"Make Key And Visible").handler(^(NSArray<NSString *> *strings) {
-            oldKeyWindow = UIApplication.sharedApplication.keyWindow;
+            oldKeyWindow = FLEXUtility.appKeyWindow;
             wasVisible = window.hidden;
             [window makeKeyAndVisible];
             
